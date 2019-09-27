@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+
+<!--
+     This is a blank Tiles definition file with a commented example.
+-->
+
+<tiles-definitions>
+
+    <!-- sample tiles definitions
+    <definition name=".mainLayout" path="/common/layouts/classicLayout.jsp">
+        <put name="title"  value="Sample Page Title" />
+        <put name="header" value="/common/header.jsp" />
+        <put name="menu"   value=".mainMenu" />
+        <put name="footer" value="/common/footer.jsp" />
+        <put name="body"   value=".portal.body" />
+    </definition>
+
+    <definition name=".mainMenu" path="/common/layouts/vboxLayout.jsp" >
+        <putList name="list" >
+            <add value=".menu.links" />
+            <add value=".menu.taglib.references" />
+            <add value=".menu.printer.friendly" />
+            <add value=".menu.old.documents" />
+      </putList>
+    </definition>
+
+    <definition name="aPage" extends=".mainLayout">
+        <put name="title"  value="Another Title" />
+        <put name="body"   value=".aPage.body" />
+    </definition>
+
+    end samples -->
+
+    <definition name="kamar.index" path="/layout/main.jsp">
+        <put name="judul" value="Daftar Kamar"/>
+        <put name="page" value="/view/kamar/v_kamar_list.jsp"/>        
+    </definition>
+    <definition name="kamar.add" extends="kamar.index">
+        <put name="judul" value="Tambah Kamar"/>
+        <put name="page" value="/view/kamar/v_kamar_add.jsp"/>        
+    </definition>
+    <definition name="kamar.update" extends="kamar.add">
+        <put name="judul" value="Ubah Kamar"/> 
+    </definition>
+    
+
+    <definition name="pegawai.index" path="/layout/main.jsp">
+        <put name="judul" value="Daftar Pegawai"/>
+        <put name="page" value="/view/pegawai/v_pegawai_list.jsp"/>        
+    </definition>
+    <definition name="pegawai.add" extends="pegawai.index">
+        <put name="judul" value="Tambah Kamar"/>
+        <put name="page" value="/view/pegawai/v_pegawai_add.jsp"/>        
+    </definition>
+    <definition name="pegawai.update" extends="pegawai.add">
+        <put name="judul" value="Ubah Pegawai"/> 
+    </definition>
+        
+    <definition name="tamu.index" path="/layout/main.jsp">
+        <put name="judul" value="Daftar Tamu"/>
+        <put name="page" value="/view/tamu/v_tamu_list.jsp"/>        
+    </definition>
+    <definition name="tamu.add" extends="tamu.index">
+        <put name="judul" value="Tambah Tamu"/>
+        <put name="page" value="/view/tamu/v_tamu_add.jsp"/>        
+    </definition>
+    <definition name="tamu.update" extends="tamu.add">
+        <put name="judul" value="Ubah Tamu"/> 
+    </definition> 
+    
+   
+    <definition name="trx.index" path="/layout/main.jsp">
+        <put name="judul" value="Transaksi Pesan Kamar"/>
+        <put name="page" value="/view/transaksi/transaksiApp.jsp"/>        
+    </definition>
+    <definition name="trx.list" extends="trx.index">
+        <put name="judul" value="List Transaksi Pesan"/>
+        <put name="page" value="/view/transaksi/transaksi_list.jsp"/>        
+    </definition>  
+    
+    <definition name="pengaturan.success" path="/layout/main.jsp">
+        <put name="judul" value="Pengaturan Aplikasi"/>
+        <put name="page" value="/view/pengaturan/v_pengaturan.jsp"/>        
+    </definition>
+     
+
+</tiles-definitions>
